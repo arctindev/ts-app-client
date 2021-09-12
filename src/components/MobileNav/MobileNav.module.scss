@@ -1,0 +1,29 @@
+@import '../../globalStyles/variables.scss';
+
+.NavWrapper {
+  grid-row: 3/3;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #{'#' + $white};
+}
+
+.NavLink {
+  position: relative;
+  height: 60px;
+  width: 60px;
+  border-radius: 16px;
+  color: #{'#' + $white};
+  font-size: $fontSizeXS;
+  font-weight: 500;
+  letter-spacing: -1.33px;
+  background-color: #{'#' + $black + 'DE'};
+
+  & > span {
+    position: absolute;
+    bottom: 14px;
+    left: 50%;
+    transform: translateX(-51%);
+  }
+}
