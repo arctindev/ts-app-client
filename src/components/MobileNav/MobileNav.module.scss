@@ -1,4 +1,5 @@
 @import '../../globalStyles/variables.scss';
+@import '../../globalStyles/mixins.module.scss';
 
 .NavWrapper {
   grid-row: 3/3;
@@ -9,21 +10,84 @@
   background-color: #{'#' + $white};
 }
 
+.LinkWrapper {
+  width: 25%;
+  position: relative;
+  @include flex-center;
+
+  &:not(:first-of-type):after {
+    position: absolute;
+    content: '';
+    width: 2px;
+    left: -1px;
+    height: 20px;
+    background-color: #{'#' + $black + 'DE'};
+  }
+}
 .NavLink {
   position: relative;
   height: 60px;
   width: 60px;
   border-radius: 16px;
-  color: #{'#' + $white};
-  font-size: $fontSizeXS;
-  font-weight: 500;
-  letter-spacing: -1.33px;
-  background-color: #{'#' + $black + 'DE'};
+  background-color: #{'#' + $white};
+  @include flex-center;
+
+  & > svg {
+    transform: translateY(-12px);
+  }
+
+  & > svg path {
+    fill: #{'#' + $black + 'DE'};
+    fill-opacity: 1;
+  }
 
   & > span {
     position: absolute;
-    bottom: 14px;
+    color: #{'#' + $black};
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: -1.33px;
+    bottom: 12px;
     left: 50%;
     transform: translateX(-51%);
+  }
+}
+
+// ======================================
+//           UTILS
+// ======================================
+
+.is-active {
+  background-color: #{'#' + $black + 'DE'};
+
+  & > span {
+    color: #{'#' + $white};
+  }
+
+  & > svg path {
+    fill: #{'#' + $white + 'FF'};
+    fill-opacity: 1;
+  }
+}
+
+// =====================================
+//           Media Queries
+// =====================================
+
+@media screen and (min-width: $mediumMobile) {
+  .NavWrapper {
+    padding: 0px 6px;
+  }
+}
+
+@media screen and (min-width: $mediumXMobile) {
+  .NavWrapper {
+    padding: 0px 9px;
+  }
+}
+
+@media screen and (min-width: $largeMobile) {
+  .NavWrapper {
+    padding: 0px 9px;
   }
 }
