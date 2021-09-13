@@ -1,15 +1,17 @@
 import React from 'react';
 import styles from './Header.module.scss';
-import { ReactComponent as LogoSVG } from '../../assets/svg/LogoSVG.svg';
+import { RootStateOrAny, useSelector } from 'react-redux';
+import HeaderLogo from '../HeaderLogo/HeaderLogo';
 
 const Header = (): JSX.Element => {
+  const darkMode = useSelector((state: RootStateOrAny) => state.darkMode);
   return (
-    <header className={styles.header}>
-      {/* <h1 className={styles.title}>Your Store</h1>
-      <div className={styles.mask}>
-        <h1>Your Store</h1>
-      </div> */}
-      <LogoSVG />
+    <header
+      className={
+        darkMode ? `${styles.Header} ${styles['is-dark']}` : `${styles.Header}`
+      }
+    >
+      <HeaderLogo />
     </header>
   );
 };

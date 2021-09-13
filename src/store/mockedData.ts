@@ -21,7 +21,8 @@ export const serviceData = [
     id: 4,
     name: 'Mike Pike',
     hour: '12AM',
-    service: 'What does the fox say? RITITIITIT RITITIIT TITIIT RITITITI RITITII TIITIT, What does the fox say?',
+    service:
+      'What does the fox say? RITITIITIT RITITIIT TITIIT RITITITI RITITII TIITIT, What does the fox say?',
   },
   {
     id: 5,

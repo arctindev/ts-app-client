@@ -6,23 +6,27 @@ import { RootStateOrAny, useSelector, useDispatch } from 'react-redux';
 import { changeTheme } from '../../store';
 
 const PageSettings = (): JSX.Element => {
-  const darkMode = useSelector((state : RootStateOrAny) => state.darkMode);
+  const darkMode = useSelector((state: RootStateOrAny) => state.darkMode);
   const dispatch = useDispatch();
+
   const handleDarkModeChange = () => {
-    console.log('hello')
     dispatch(changeTheme());
-    console.log(darkMode);
-  }
+  };
 
   return (
     <div className={styles.Wrapper}>
       <Title titleText="Settings" />
       <Label classConfig="isSettingsMenu" labelText="Change account details" />
       <button className={styles.SettingsButton} onClick={handleDarkModeChange}>
-      <Label classConfig="isSettingsMenu" labelText={darkMode? "Switch to light theme" : "Switch to dark theme"} />
+        <Label
+          classConfig="isSettingsMenu"
+          labelText={
+            darkMode ? 'Switch to light theme' : 'Switch to dark theme'
+          }
+        />
       </button>
     </div>
   );
-}
+};
 
 export default PageSettings;

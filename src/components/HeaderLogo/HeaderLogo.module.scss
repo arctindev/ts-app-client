@@ -1,0 +1,15 @@
+@import '../../globalStyles/variables.scss';
+
+.LogoSVG {
+  & path {
+    fill: #{'#' + $black};
+    fill-opacity: 1;
+  }
+}
+
+.is-dark {
+  & path {
+    fill: #{'#' + $white};
+    fill-opacity: 0.87;
+  }
+}

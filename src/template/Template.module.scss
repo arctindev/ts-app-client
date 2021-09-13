@@ -6,9 +6,9 @@
   display: grid;
   grid-template-rows: 78px auto 80px;
   margin: 0;
-  background-color: #{"#" + $white};
+  background-color: #{'#' + $white};
 }
 
-.dark {
-  background-color: #{"#" + $black};
+.is-dark {
+  background-color: #{'#' + $black};
 }

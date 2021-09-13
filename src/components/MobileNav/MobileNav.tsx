@@ -10,25 +10,42 @@ const MobileNav = (): JSX.Element => {
   return (
     <nav className={styles.NavWrapper}>
       <div className={styles.LinkWrapper}>
-        <NavLink className={styles.NavLink} activeClassName={styles['is-active']} to="/store">
+        <NavLink
+          className={styles.NavLink}
+          activeClassName={styles['is-active']}
+          to="/store"
+        >
           <StoreSVG />
           <span>Store</span>
         </NavLink>
       </div>
       <div className={styles.LinkWrapper}>
-        <NavLink className={styles.NavLink} activeClassName={styles['is-active']} to="/history">
+        <NavLink
+          className={styles.NavLink}
+          activeClassName={styles['is-active']}
+          to="/history"
+        >
           <HistorySVG />
           <span>History</span>
         </NavLink>
       </div>
       <div className={styles.LinkWrapper}>
-        <NavLink className={styles.NavLink} activeClassName={styles['is-active']} to="/settings">
+        <NavLink
+          className={styles.NavLink}
+          activeClassName={styles['is-active']}
+          to="/settings"
+        >
           <SettingsSVG />
           <span>Settings</span>
         </NavLink>
       </div>
       <div className={styles.LinkWrapper}>
-        <NavLink className={styles.NavLink} activeClassName={styles['is-active']} exact to="/">
+        <NavLink
+          className={styles.NavLink}
+          activeClassName={styles['is-active']}
+          exact
+          to="/"
+        >
           <LogoutSVG />
           <span>Logout</span>
         </NavLink>

@@ -3,7 +3,7 @@ import styles from './PageStore.module.scss';
 import { RootStateOrAny, useSelector } from 'react-redux';
 
 const PageStore = (): JSX.Element => {
-  const services = useSelector((state : RootStateOrAny) => state.service);
+  const services = useSelector((state: RootStateOrAny) => state.service);
   return (
     <div className={styles.Wrapper}>
       <h1>Store</h1>

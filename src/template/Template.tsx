@@ -9,9 +9,15 @@ type Props = {
 };
 
 const Template: React.FC<Props> = ({ children }) => {
-  const darkMode = useSelector((state : RootStateOrAny) => state.darkMode);
+  const darkMode = useSelector((state: RootStateOrAny) => state.darkMode);
   return (
-    <div className={darkMode? `${styles.Template} ${styles.dark}` : `${styles.Template}` }>
+    <div
+      className={
+        darkMode
+          ? `${styles.Template} ${styles['is-dark']}`
+          : `${styles.Template}`
+      }
+    >
       <Header />
       {children}
       <MobileNav />

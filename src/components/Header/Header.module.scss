@@ -1,6 +1,6 @@
 @import '../../globalStyles/variables.scss';
 
-.header {
+.Header {
   position: relative;
   grid-row: 1/1;
   width: 100%;
@@ -12,55 +12,11 @@
   box-shadow: 0px 0px 4px 2px #{'#' + $black + '30'};
 }
 
-// .title {
-//   position: relative;
-//   font-size: $fontSizeXL;
-//   letter-spacing: -1.67px;
-//   transform: translateY(-2px);
-//   color: transparent;
-//   font-weight: 900;
-//   &:before {
-//     position: absolute;
-//     content: 'Your Store';
-//     top: 2px;
-//     left: 0;
-//     bottom: 0;
-//     right: 0;
-//     color: #{'#' + $black + '30'};
-//   }
-//   &:after {
-//     position: absolute;
-//     content: 'Your Store';
-//     top: 3.5px;
-//     left: 0;
-//     bottom: 0;
-//     right: 0;
-//     color: transparent;
-//     text-shadow: 0px 0px 3.5px #{'#' + $black + 'DE'};
-//   }
-// }
+.is-dark {
+  background-color: #{'#' + $white + '1C'};
 
-// .mask {
-//   z-index: 1;
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   bottom: 0;
-//   right: 0;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   background-color: transparent;
-//   mix-blend-mode: screen;
-//   filter: contrast(140%);
-//   & > h1 {
-//     font-size: $fontSizeXL;
-//     letter-spacing: -1.67px;
-//     font-weight: 900;
-//     color: #{'#' + $black + 'DE'};
-//     text-shadow: 0px -2.5px 8px #{'#' + $white + 'FF'}, 0px 0.12px 18px #{'#' + $grey + '2F'},
-//       -0.5px 0px 8px #{'#' + $white + 'FF'}, 15px 0px 8px #{'#' + $black + '2F'};
-//   }
-// }
-//
-// I know, the css code is 5kb less, but svg, just looks good, and i dont want to animate the logo
+  & > svg path {
+    fill: #{'#' + $white};
+    fill-opacity: 0.87;
+  }
+}

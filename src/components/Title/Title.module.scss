@@ -8,6 +8,10 @@
   margin-bottom: 30px;
 }
 
+.is-dark {
+  color: #{'#' + $white + 'DE'};
+}
+
 @media screen and (min-width: $tablet) {
   .Title {
     font-size: $fontSizeXM;
