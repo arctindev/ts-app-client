@@ -1,5 +1,6 @@
 import React from 'react';
 import '../src/index.scss';
+import AppProviders from '../src/providers/AppProviders';
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
@@ -11,4 +12,10 @@ export const parameters = {
   },
 };
 
-export const decorators = [(Story) => <Story />];
+export const decorators = [
+  (Story) => (
+    <AppProviders>
+      <Story />
+    </AppProviders>
+  ),
+];

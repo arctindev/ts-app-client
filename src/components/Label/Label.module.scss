@@ -1,0 +1,13 @@
+@import '../../globalStyles/variables.scss';
+
+.Label {
+  color: #{'#' + $black};
+  font-size: $fontSizeS;
+  letter-spacing: -1.33px;
+  font-weight: 500px;
+}
+
+.isSettingsMenu {
+  color: #{'#' + $black + '99'};
+  margin-bottom: 18px;
+}

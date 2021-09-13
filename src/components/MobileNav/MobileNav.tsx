@@ -6,7 +6,7 @@ import { ReactComponent as HistorySVG } from '../../assets/svg/HistorySVG.svg';
 import { ReactComponent as SettingsSVG } from '../../assets/svg/SettingsSVG.svg';
 import { ReactComponent as LogoutSVG } from '../../assets/svg/LogoutSVG.svg';
 
-const MobileNav = () => {
+const MobileNav = (): JSX.Element => {
   return (
     <nav className={styles.NavWrapper}>
       <div className={styles.LinkWrapper}>

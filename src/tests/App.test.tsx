@@ -1,12 +1,8 @@
-import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import App from '../views/App';
 
-test('renders learn react link', async () => {
+test('renders the app correctly', async () => {
   render(<App />);
-  const buttonElement = await screen.getByText('Change State');
-  expect(buttonElement).toBeInTheDocument();
-  fireEvent.click(buttonElement);
-  const text = await screen.findByText('Hello, but this route was not found');
-  expect(text).toBeInTheDocument();
+  const navElement = await screen.getByText('History');
+  expect(navElement).toBeInTheDocument();
 });

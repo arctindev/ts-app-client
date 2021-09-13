@@ -1,9 +1,9 @@
 import React from 'react';
 import { Switch, Route, Redirect } from 'react-router-dom';
-import Page404 from "./Page404/Page404";
-import PageHistory from "./PageHistory/PageHistory"
-import PageStore from "./PageStore/PageStore"
-import PageSettings from "./PageSettings/PageSettings"
+import Page404 from './Page404/Page404';
+import PageHistory from './PageHistory/PageHistory';
+import PageStore from './PageStore/PageStore';
+import PageSettings from './PageSettings/PageSettings';
 
 const Routes = (): JSX.Element => (
   <Switch>

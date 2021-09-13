@@ -1,5 +1,27 @@
-@import "../../globalStyles/mixins.module.scss";
+@import '../../globalStyles/mixins.module.scss';
 
-.wrapper {
-    @include ViewWrapper;
-  };
+.Wrapper {
+  @include ViewWrapper;
+}
+
+.SettingsMenuItem {
+  margin-bottom: 24px;
+}
+
+@media screen and (min-width: $mediumMobile) {
+  .Wrapper {
+    padding: 21px 18px;
+  }
+}
+
+@media screen and (min-width: $mediumXMobile) {
+  .Wrapper {
+    padding: 21px 21px;
+  }
+}
+
+@media screen and (min-width: $largeMobile) {
+  .Wrapper {
+    padding: 21px 24px;
+  }
+}
