@@ -8,6 +8,12 @@
   margin-bottom: 24px;
 }
 
+.SettingsButton {
+  border: none;
+  background: none;
+  color: #{'#' + $black + '99'};
+}
+
 @media screen and (min-width: $mediumMobile) {
   .Wrapper {
     padding: 21px 18px;

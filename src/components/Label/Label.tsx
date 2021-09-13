@@ -6,6 +6,6 @@ export interface LabelProps {
   classConfig: string | undefined;
 }
 
-export const Label = ({ labelText, classConfig }: LabelProps): JSX.Element => (
-  <p className={classConfig ? `${styles.Label} ${styles[classConfig]}` : `${styles.Label}`}>{labelText}</p>
+export const Label = ({ labelText, classConfig, ...props }: LabelProps): JSX.Element => (
+  <p className={classConfig ? `${styles.Label} ${styles[classConfig]}` : `${styles.Label}` } {...props}>{labelText}</p>
 );
