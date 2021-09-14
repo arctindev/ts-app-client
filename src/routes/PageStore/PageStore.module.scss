@@ -4,18 +4,14 @@
 .Wrapper {
   @include ViewWrapper;
   grid-row: 2/2;
+  height: calc(100vh - calc(78px + 80px));
+  overflow-y: auto;
 }
 
-.DarkScrollColor {
-  &::before {
-    background-color: white !important;
-  }
-}
-
-.ScrollColor {
-  &::before {
-    background-color: black !important;
-  }
+.PageTitle {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 @media screen and (min-width: $mediumMobile) {
@@ -38,7 +34,7 @@
 
 @media screen and (max-height: $mobileLandscape) {
   .Wrapper {
-    padding: 24px 44px 24px 56px;
+    padding: 24px 56px;
     height: 100vh;
     grid-row: 1/1;
     grid-column: 2/2;

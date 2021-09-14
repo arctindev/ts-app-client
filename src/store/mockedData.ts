@@ -3,7 +3,7 @@ export const serviceData = [
     id: 1,
     name: 'John Smith',
     hour: '9AM',
-    service: "loading of 5 macbooks, 4 keyboards, 3 LCD's, 5 iphones",
+    service: "Loading of 5 macbooks, 4 keyboards, 3 LCD's, 5 iphones",
   },
   {
     id: 2,
@@ -28,6 +28,24 @@ export const serviceData = [
     id: 5,
     name: 'Lukas Skywalker',
     hour: '1PM',
+    service: 'No service.',
+  },
+  {
+    id: 6,
+    name: 'Lukas Skywalker',
+    hour: '2PM',
+    service: 'No service.',
+  },
+  {
+    id: 7,
+    name: 'Lukas Skywalker',
+    hour: '3PM',
+    service: 'No service.',
+  },
+  {
+    id: 8,
+    name: 'Lukas Skywalker',
+    hour: '4PM',
     service: 'No service.',
   },
 ];

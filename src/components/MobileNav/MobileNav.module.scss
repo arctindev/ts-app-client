@@ -1,6 +1,14 @@
 @import '../../globalStyles/variables.scss';
 @import '../../globalStyles/mixins.scss';
 
+// 1. Navbar
+// 2. Media Queries
+// 3. Utility and Dark Mode
+
+// =====================================
+//         1.  Navbar
+// =====================================
+
 .NavWrapper {
   grid-row: 3/3;
   width: 100%;
@@ -53,7 +61,7 @@
 }
 
 // =====================================
-//           Media Queries
+//         2.  Media Queries
 // =====================================
 
 @media screen and (min-width: $mediumMobile) {
@@ -98,7 +106,7 @@
 }
 
 // ======================================
-//           UTILS
+//    3. Utility and Dark Mode
 // ======================================
 
 .is-active {
