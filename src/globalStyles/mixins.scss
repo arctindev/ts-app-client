@@ -8,6 +8,5 @@
 
 @mixin ViewWrapper {
   height: calc(100vh - 78px - 80px);
-  grid-row: 2/2;
   padding: 21px 12px;
 }

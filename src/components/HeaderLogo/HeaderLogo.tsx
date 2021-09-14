@@ -5,7 +5,9 @@ import LogoSvgPath from './LogoSvgPath';
 import LogoSvgFilter from './LogoSvgFilter';
 
 const HeaderLogo = (): JSX.Element => {
-  const darkMode: boolean = useSelector((state: RootStateOrAny) => state.darkMode);
+  const darkMode: boolean = useSelector(
+    (state: RootStateOrAny) => state.darkMode
+  );
   return (
     <svg
       className={

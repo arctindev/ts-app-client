@@ -5,44 +5,94 @@ import { ReactComponent as StoreSVG } from '../../assets/svg/StoreSVG.svg';
 import { ReactComponent as HistorySVG } from '../../assets/svg/HistorySVG.svg';
 import { ReactComponent as SettingsSVG } from '../../assets/svg/SettingsSVG.svg';
 import { ReactComponent as LogoutSVG } from '../../assets/svg/LogoutSVG.svg';
+import { RootStateOrAny, useSelector } from 'react-redux';
 
 const MobileNav = (): JSX.Element => {
+  const darkMode = useSelector((state: RootStateOrAny) => state.darkMode);
   return (
     <nav className={styles.NavWrapper}>
-      <div className={styles.LinkWrapper}>
+      <div
+        className={
+          darkMode
+            ? `${styles.LinkWrapper} ${styles['is-dark-LinkWrapper']}`
+            : `${styles.LinkWrapper}`
+        }
+      >
         <NavLink
-          className={styles.NavLink}
-          activeClassName={styles['is-active']}
+          className={
+            darkMode
+              ? `${styles.NavLink} ${styles['is-dark-NavLink']}`
+              : `${styles.NavLink}`
+          }
+          activeClassName={
+            darkMode ? styles['is-active-dark'] : styles['is-active']
+          }
           to="/store"
         >
           <StoreSVG />
           <span>Store</span>
         </NavLink>
       </div>
-      <div className={styles.LinkWrapper}>
+      <div
+        className={
+          darkMode
+            ? `${styles.LinkWrapper} ${styles['is-dark-LinkWrapper']}`
+            : `${styles.LinkWrapper}`
+        }
+      >
         <NavLink
-          className={styles.NavLink}
-          activeClassName={styles['is-active']}
+          className={
+            darkMode
+              ? `${styles.NavLink} ${styles['is-dark-NavLink']}`
+              : `${styles.NavLink}`
+          }
+          activeClassName={
+            darkMode ? styles['is-active-dark'] : styles['is-active']
+          }
           to="/history"
         >
           <HistorySVG />
           <span>History</span>
         </NavLink>
       </div>
-      <div className={styles.LinkWrapper}>
+      <div
+        className={
+          darkMode
+            ? `${styles.LinkWrapper} ${styles['is-dark-LinkWrapper']}`
+            : `${styles.LinkWrapper}`
+        }
+      >
         <NavLink
-          className={styles.NavLink}
-          activeClassName={styles['is-active']}
+          className={
+            darkMode
+              ? `${styles.NavLink} ${styles['is-dark-NavLink']}`
+              : `${styles.NavLink}`
+          }
+          activeClassName={
+            darkMode ? styles['is-active-dark'] : styles['is-active']
+          }
           to="/settings"
         >
           <SettingsSVG />
           <span>Settings</span>
         </NavLink>
       </div>
-      <div className={styles.LinkWrapper}>
+      <div
+        className={
+          darkMode
+            ? `${styles.LinkWrapper} ${styles['is-dark-LinkWrapper']}`
+            : `${styles.LinkWrapper}`
+        }
+      >
         <NavLink
-          className={styles.NavLink}
-          activeClassName={styles['is-active']}
+          className={
+            darkMode
+              ? `${styles.NavLink} ${styles['is-dark-NavLink']}`
+              : `${styles.NavLink}`
+          }
+          activeClassName={
+            darkMode ? styles['is-active-dark'] : styles['is-active']
+          }
           exact
           to="/"
         >

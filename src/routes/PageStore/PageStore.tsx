@@ -1,21 +1,13 @@
 import React from 'react';
 import styles from './PageStore.module.scss';
-import { RootStateOrAny, useSelector } from 'react-redux';
+import { Title } from '../../components/Title/Title';
+import ServiceList from '../../components/ServiceList/ServiceList';
 
 const PageStore = (): JSX.Element => {
-  const services = useSelector((state: RootStateOrAny) => state.service);
   return (
     <div className={styles.Wrapper}>
-      <h1>Store</h1>
-      {services &&
-        services.map((service: any) => (
-          <div key={service.id}>
-            <p>{service.hour}</p>
-            <p>{service.name}</p>
-            <p>{service.service}</p>
-            <p>================</p>
-          </div>
-        ))}
+      <Title titleText="Store" />
+      <ServiceList />
     </div>
   );
 };

@@ -4,7 +4,7 @@ import { RootStateOrAny, useSelector } from 'react-redux';
 
 export interface LabelProps {
   labelText: string;
-  classConfig: string | undefined;
+  classConfig?: string;
 }
 
 export const Label = ({ labelText, classConfig }: LabelProps): JSX.Element => {
