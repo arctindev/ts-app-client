@@ -34,7 +34,10 @@
 
 @media screen and (max-height: $mobileLandscape) {
   .Wrapper {
+    padding: 24px 56px;
+    height: 100vh;
     grid-row: 1/1;
     grid-column: 2/2;
+    overflow-y: auto;
   }
 }

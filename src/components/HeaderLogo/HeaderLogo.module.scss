@@ -1,7 +1,7 @@
 @import '../../globalStyles/variables.scss';
 
 .LogoSVG {
-  position:fixed;
+  position: fixed;
   & path {
     fill: #{'#' + $black};
     fill-opacity: 1;
@@ -16,7 +16,7 @@
 }
 
 @media screen and (max-height: $mobileLandscape) {
-  .LogoSVG{
-     transform: rotateZ(90deg);
+  .LogoSVG {
+    transform: rotateZ(90deg);
   }
 }

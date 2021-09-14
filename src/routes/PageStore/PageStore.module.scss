@@ -1,8 +1,21 @@
 @import '../../globalStyles/mixins.scss';
+@import '../../globalStyles/variables.scss';
 
 .Wrapper {
   @include ViewWrapper;
-  grid-row:2/2;
+  grid-row: 2/2;
+}
+
+.DarkScrollColor {
+  &::before {
+    background-color: white !important;
+  }
+}
+
+.ScrollColor {
+  &::before {
+    background-color: black !important;
+  }
 }
 
 @media screen and (min-width: $mediumMobile) {
@@ -25,6 +38,8 @@
 
 @media screen and (max-height: $mobileLandscape) {
   .Wrapper {
+    padding: 24px 44px 24px 56px;
+    height: 100vh;
     grid-row: 1/1;
     grid-column: 2/2;
   }
