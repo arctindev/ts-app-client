@@ -1,0 +1,31 @@
+@import '../../globalStyles/mixins.scss';
+
+.Wrapper {
+  @include ViewWrapper;
+  grid-row: 2/2;
+}
+
+@media screen and (min-width: $mediumMobile) {
+  .Wrapper {
+    padding: 21px 18px;
+  }
+}
+
+@media screen and (min-width: $mediumXMobile) {
+  .Wrapper {
+    padding: 21px 21px;
+  }
+}
+
+@media screen and (min-width: $largeMobile) {
+  .Wrapper {
+    padding: 21px 24px;
+  }
+}
+
+@media screen and (max-height: $mobileLandscape) {
+  .Wrapper {
+    grid-row: 1/1;
+    grid-column: 2/2;
+  }
+}

@@ -1,0 +1,25 @@
+@import '../../globalStyles/variables.scss';
+
+.Title {
+  color: #{'#' + $black};
+  font-size: $fontSizeM;
+  letter-spacing: -1px;
+  font-weight: 800px;
+  margin-bottom: 30px;
+}
+
+.is-dark {
+  color: #{'#' + $white + 'DE'};
+}
+
+@media screen and (min-width: $tablet) {
+  .Title {
+    font-size: $fontSizeXM;
+  }
+}
+
+@media screen and (min-width: $desktop) {
+  .Title {
+    font-size: $fontSizeL;
+  }
+}

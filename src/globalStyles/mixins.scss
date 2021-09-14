@@ -1,0 +1,12 @@
+@import './variables.scss';
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin ViewWrapper {
+  height: calc(100vh - 78px - 80px);
+  padding: 21px 12px;
+}
