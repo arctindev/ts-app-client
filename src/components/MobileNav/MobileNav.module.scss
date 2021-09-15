@@ -105,6 +105,12 @@
   }
 }
 
+@media screen and (min-width: $tablet) and (min-height: $mobileLandscape+1) {
+  .NavWrapper {
+    display: none;
+  }
+}
+
 // ======================================
 //    3. Utility and Dark Mode
 // ======================================

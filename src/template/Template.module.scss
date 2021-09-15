@@ -19,3 +19,9 @@
     grid-template-columns: 78px auto 80px;
   }
 }
+
+@media screen and (min-width: $tablet) and (min-height: $mobileLandscape+1) {
+  .Template {
+    grid-template-columns: repeat(12, [col-start] 1fr);
+  }
+}

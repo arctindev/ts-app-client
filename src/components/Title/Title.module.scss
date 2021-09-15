@@ -12,13 +12,13 @@
   color: #{'#' + $white + 'DE'};
 }
 
-@media screen and (min-width: $tablet) {
+@media screen and (min-width: $tablet) and (min-height: $mobileLandscape+1) {
   .Title {
     font-size: $fontSizeXM;
   }
 }
 
-@media screen and (min-width: $desktop) {
+@media screen and (min-width: $desktop) and (min-height: $mobileLandscape+1) {
   .Title {
     font-size: $fontSizeL;
   }
