@@ -1,16 +1,17 @@
 import React from 'react';
-import Template from '../template/Template';
-import { BrowserRouter as Router } from 'react-router-dom';
-import Routes from '../routes/Routes';
+import Authenticated from './Authenticated/Authenticated';
+import Unauthenticated from './Unauthenticated/Unauthticated';
+import { RootStateOrAny, useSelector } from 'react-redux';
+
+const AuthCode: any = `${process.env.REACT_APP_SECRET_NAME}`;
 
 const App = (): JSX.Element => {
-  return (
-    <Router>
-      <Template>
-        <Routes />
-      </Template>
-    </Router>
-  );
+  const auth = useSelector((state: RootStateOrAny) => state.authentication);
+
+  if (auth === AuthCode) {
+    return <Authenticated />;
+  }
+  return <Unauthenticated />;
 };
 
 export default App;

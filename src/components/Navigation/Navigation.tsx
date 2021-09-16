@@ -1,10 +1,16 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import styles from './Navigation.module.scss';
-import { RootStateOrAny, useSelector } from 'react-redux';
+import { RootStateOrAny, useSelector, useDispatch } from 'react-redux';
+import { authLogout } from '../../store';
 
 const Navigation = () => {
   const darkMode = useSelector((state: RootStateOrAny) => state.darkMode);
+  const dispatch = useDispatch();
+
+  const handleLogoutClick = () => {
+    dispatch(authLogout());
+  };
   return (
     <nav className={styles.Navigation}>
       <NavLink
@@ -30,6 +36,7 @@ const Navigation = () => {
         Settings
       </NavLink>
       <NavLink
+        onClick={handleLogoutClick}
         className={
           darkMode
             ? `${styles.NavLink} ${styles['is-dark']}`

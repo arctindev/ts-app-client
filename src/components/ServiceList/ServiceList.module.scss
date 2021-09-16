@@ -13,8 +13,7 @@
 }
 
 @media screen and (min-width: $desktop) and (min-height: $mobileLandscape+1) {
-    .ServiceList {
-      grid-column: col-start 1 / span 5;
-    }
+  .ServiceList {
+    grid-column: col-start 1 / span 5;
   }
-  
+}

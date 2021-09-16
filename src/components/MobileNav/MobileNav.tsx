@@ -5,10 +5,18 @@ import { ReactComponent as StoreSVG } from '../../assets/svg/StoreSVG.svg';
 import { ReactComponent as HistorySVG } from '../../assets/svg/HistorySVG.svg';
 import { ReactComponent as SettingsSVG } from '../../assets/svg/SettingsSVG.svg';
 import { ReactComponent as LogoutSVG } from '../../assets/svg/LogoutSVG.svg';
-import { RootStateOrAny, useSelector } from 'react-redux';
+import { RootStateOrAny, useSelector, useDispatch } from 'react-redux';
+import { authLogout } from '../../store';
 
 const MobileNav = (): JSX.Element => {
   const darkMode = useSelector((state: RootStateOrAny) => state.darkMode);
+
+  const dispatch = useDispatch();
+
+  const handleLogoutClick = () => {
+    dispatch(authLogout());
+  };
+
   return (
     <nav className={styles.NavWrapper}>
       <div
@@ -85,6 +93,7 @@ const MobileNav = (): JSX.Element => {
         }
       >
         <NavLink
+          onClick={handleLogoutClick}
           className={
             darkMode
               ? `${styles.NavLink} ${styles['is-dark-NavLink']}`

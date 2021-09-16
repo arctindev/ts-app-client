@@ -14,8 +14,8 @@
 }
 
 .NavLink.is-dark {
-    color: #{'#' + $white + 'DE'};
-  }
+  color: #{'#' + $white + 'DE'};
+}
 
 @media screen and (min-width: $tablet) and (min-height: $mobileLandscape+1) {
   .Navigation {
@@ -29,8 +29,8 @@
 }
 
 @media screen and (min-width: $desktop) and (min-height: $mobileLandscape+1) {
-    .Navigation {
-        margin-top: 50px;
-        margin-left: 96px;
+  .Navigation {
+    margin-top: 50px;
+    margin-left: 96px;
   }
 }
