@@ -4,9 +4,13 @@ import Page404 from './Page404/Page404';
 import PageHistory from './PageHistory/PageHistory';
 import PageStore from './PageStore/PageStore';
 import PageSettings from './PageSettings/PageSettings';
+import PageHistoryItem from './PageHistoryItem/PageHistoryItem';
 
 const Routes = (): JSX.Element => (
   <Switch>
+    <Route path="/history/:id">
+      <PageHistoryItem />
+    </Route>
     <Route exact path="/store">
       <PageStore />
     </Route>

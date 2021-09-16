@@ -1,0 +1,19 @@
+@import '../../globalStyles/variables.scss';
+@import '../../globalStyles/mixins.scss';
+
+.ServiceList {
+  grid-column: col-start 1 / span 12;
+  grid-row: 2/2;
+}
+
+@media screen and (min-width: $tablet) and (min-height: $mobileLandscape+1) {
+  .ServiceList {
+    grid-column: col-start 1 / span 7;
+  }
+}
+
+@media screen and (min-width: $desktop) and (min-height: $mobileLandscape+1) {
+  .ServiceList {
+    grid-column: col-start 1 / span 5;
+  }
+}

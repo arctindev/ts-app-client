@@ -1,6 +1,14 @@
 @import '../../globalStyles/variables.scss';
 @import '../../globalStyles/mixins.scss';
 
+// 1. Navbar
+// 2. Media Queries
+// 3. Utility and Dark Mode
+
+// =====================================
+//         1.  Navbar
+// =====================================
+
 .NavWrapper {
   grid-row: 3/3;
   width: 100%;
@@ -53,7 +61,7 @@
 }
 
 // =====================================
-//           Media Queries
+//         2.  Media Queries
 // =====================================
 
 @media screen and (min-width: $mediumMobile) {
@@ -77,8 +85,8 @@
   .NavWrapper {
     grid-row: 1/1;
     grid-column: 1/1;
-    width:80px;
-    height:100vh;
+    width: 80px;
+    height: 100vh;
     flex-direction: column;
     padding: 12px 0;
   }
@@ -89,17 +97,22 @@
       position: absolute;
       content: '';
       width: 20px;
-      top:-1px;
-      left:calc(50% - 10px);
+      top: -1px;
+      left: calc(50% - 10px);
       height: 2px;
       background-color: #{'#' + $black + 'DE'};
     }
   }
 }
 
+@media screen and (min-width: $tablet) and (min-height: $mobileLandscape+1) {
+  .NavWrapper {
+    display: none;
+  }
+}
 
 // ======================================
-//           UTILS
+//    3. Utility and Dark Mode
 // ======================================
 
 .is-active {

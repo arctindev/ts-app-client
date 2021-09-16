@@ -1,0 +1,30 @@
+@import '../../globalStyles/variables.scss';
+
+.HistorySidebar {
+  display: none;
+  grid-column: col-start 10 / span 4;
+  grid-row: 2/ 2;
+  background-color: #{'#' + $black + 'DE'};
+  overflow-y: auto;
+  padding: 0 12px;
+}
+
+.HistoryTitle {
+  font-size: $fontSizeXM;
+  margin-top: 50px;
+  margin-bottom: 42px;
+  color: #{'#' + $white};
+}
+
+.HistoryTitle.is-dark {
+  color: #{'#' + $white + 'DE'};
+}
+
+.HistorySidebar.is-dark {
+  background-color: #{'#' + $white + '14'};
+}
+@media screen and (min-width: $desktop) and (min-height: $mobileLandscape+1) {
+  .HistorySidebar {
+    display: block;
+  }
+}

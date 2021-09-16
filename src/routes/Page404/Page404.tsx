@@ -4,7 +4,9 @@ import { Title } from '../../components/Title/Title';
 
 const Page404 = (): JSX.Element => (
   <div className={styles.Wrapper}>
-    <Title titleText="404 Page not found" />
+    <div className={styles.PageTitle}>
+      <Title titleText="404 Page not found" />
+    </div>
   </div>
 );
 

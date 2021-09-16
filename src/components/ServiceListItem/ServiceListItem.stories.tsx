@@ -1,4 +1,4 @@
-import { ServiceListItem } from './ServiceListItem';
+import ServiceListItem from './ServiceListItem';
 
 export default {
   title: 'Components/ServiceListItem',

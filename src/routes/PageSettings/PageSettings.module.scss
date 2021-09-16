@@ -1,8 +1,15 @@
 @import '../../globalStyles/mixins.scss';
+@import '../../globalStyles/variables.scss';
 
 .Wrapper {
   @include ViewWrapper;
   grid-row: 2/2;
+  height: calc(100vh - calc(78px + 80px));
+  overflow-y: auto;
+}
+
+.SettingsMenu {
+  grid-column: col-start 1 / span 12;
 }
 
 .SettingsMenuItem {
@@ -34,7 +41,36 @@
 
 @media screen and (max-height: $mobileLandscape) {
   .Wrapper {
+    padding: 24px 56px;
+    height: 100vh;
     grid-row: 1/1;
     grid-column: 2/2;
+  }
+}
+
+@media screen and (min-width: $tablet) and (min-height: $mobileLandscape+1) {
+  .Wrapper {
+    padding: 42px 0px;
+    grid-column: col-start 4 / span 12;
+    display: grid;
+    grid-template-columns: repeat(9, [col-start] 1fr);
+    grid-column-gap: 24px;
+  }
+
+  .PageTitle {
+    grid-column: col-start 1 / span 7;
+  }
+}
+
+@media screen and (min-width: $desktop) and (min-height: $mobileLandscape+1) {
+  .Wrapper {
+    padding: 50px 0px;
+    grid-column: col-start 4 / span 6;
+    grid-template-columns: repeat(6, [col-start] 1fr);
+    grid-column-gap: 24px;
+  }
+
+  .PageTitle {
+    grid-column: col-start 1 / span 5;
   }
 }

@@ -15,16 +15,24 @@ const PageSettings = (): JSX.Element => {
 
   return (
     <div className={styles.Wrapper}>
-      <Title titleText="Settings" />
-      <Label classConfig="isSettingsMenu" labelText="Change account details" />
-      <button className={styles.SettingsButton} onClick={handleDarkModeChange}>
+      <div className={styles.SettingsMenu}>
+        <Title titleText="Settings" />
         <Label
           classConfig="isSettingsMenu"
-          labelText={
-            darkMode ? 'Switch to light theme' : 'Switch to dark theme'
-          }
+          labelText="Change account details"
         />
-      </button>
+        <button
+          className={styles.SettingsButton}
+          onClick={handleDarkModeChange}
+        >
+          <Label
+            classConfig="isSettingsMenu"
+            labelText={
+              darkMode ? 'Switch to light theme' : 'Switch to dark theme'
+            }
+          />
+        </button>
+      </div>
     </div>
   );
 };
