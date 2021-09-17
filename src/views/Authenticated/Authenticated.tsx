@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Template from '../../template/Template';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Routes from '../../routes/Routes';

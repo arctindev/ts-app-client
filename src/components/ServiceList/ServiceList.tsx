@@ -12,7 +12,7 @@ export interface ListProps {
 }
 
 const ServiceList = ({ id }: ListProps) => {
-  const [getServices, { isLoading, data, isSuccess }] = useGetDayByIdMutation();
+  const [getServices, { data, isSuccess }] = useGetDayByIdMutation();
 
   useEffect(() => {
     if (id) {
@@ -22,12 +22,10 @@ const ServiceList = ({ id }: ListProps) => {
     }
   }, [getServices, id]);
 
-  console.log(data, isSuccess, isLoading);
-
   return (
     <ul className={styles.ServiceList}>
       <Suspense fallback={<ServiceListSuspence />}>
-        {isSuccess ? (
+        {isSuccess && data.data[0] ? (
           data.data[0].data.map((serviceData: ServiceListItemProps) => (
             <ServiceListItem key={serviceData.id} {...serviceData} />
           ))

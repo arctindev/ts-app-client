@@ -3,24 +3,20 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 export const userApi = createApi({
   reducerPath: 'userApi',
   baseQuery: fetchBaseQuery({
-    baseUrl: 'http://localhost:5000/user-data/',
+    baseUrl: 'http://localhost:5000/authentication/',
   }),
+  tagTypes: ['User'],
 
   endpoints: (builder) => ({
-    getHistory: builder.query({
-      query: () => ({
-        url: `getUser/`,
-      }),
-    }),
-
     login: builder.mutation({
       query: (body) => ({
         url: `login/`,
         method: 'POST',
         body,
       }),
+      invalidatesTags: ['User'],
     }),
   }),
 });
 
-export const { useGetHistoryQuery, useLoginMutation } = userApi;
+export const { useLoginMutation } = userApi;

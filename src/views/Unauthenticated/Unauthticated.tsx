@@ -1,19 +1,36 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { authLogin } from '../../store';
+import { authLogin, useLoginMutation } from '../../store';
 
 const Unauthenticated = (): JSX.Element => {
   const dispatch = useDispatch();
+  const loginRef = useRef(null);
+  const passRef = useRef(null);
+  const [getUser, { isError, data, isSuccess }] = useLoginMutation();
 
   const handleLoginClick = () => {
-    dispatch(authLogin());
+    const login = (loginRef as any).current.value;
+    const pass = (passRef as any).current.value;
+    getUser({ login: login, pass: pass });
   };
+
+  useEffect(() => {
+    if (isSuccess && data.message === 'Success') {
+      console.log('Succesfully loged in');
+      sessionStorage.setItem('token', data.token);
+      dispatch(authLogin());
+    }
+    if (isError) {
+      console.log('Sth is wrong');
+    }
+  }, [data, dispatch, isError, isSuccess]);
+
   return (
     <div>
       <p>Login</p>
-      <input></input>
+      <input ref={loginRef}></input>
       <p>Passowrd</p>
-      <input></input>
+      <input ref={passRef}></input>
       <button onClick={handleLoginClick}>Log In</button>
     </div>
   );
