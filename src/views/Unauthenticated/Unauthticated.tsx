@@ -18,6 +18,7 @@ const Unauthenticated = (): JSX.Element => {
     if (isSuccess && data.message === 'Success') {
       console.log('Succesfully loged in');
       sessionStorage.setItem('token', data.token);
+      sessionStorage.setItem('me', data.me);
       dispatch(authLogin());
     }
     if (isError) {

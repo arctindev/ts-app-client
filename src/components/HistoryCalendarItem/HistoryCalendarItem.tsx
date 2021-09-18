@@ -8,7 +8,7 @@ export const HistoryCalendarItem = ({ itemData }: any) => {
   const darkMode = useSelector((state: RootStateOrAny) => state.darkMode);
   return (
     <Link
-      to={`/history/` + itemData.id}
+      to={`/history/` + itemData._id}
       className={
         darkMode
           ? `${styles.HistoryCalendarItem} ${styles['is-dark']}`
@@ -16,8 +16,8 @@ export const HistoryCalendarItem = ({ itemData }: any) => {
       }
     >
       <div className={styles.DateWrapper}>
-        <span>{dataUtilityDay(itemData.id)}</span>
-        <span>{dataUtilityMonth(itemData.id)}</span>
+        <span>{dataUtilityDay(itemData.date)}</span>
+        <span>{dataUtilityMonth(itemData.date)}</span>
       </div>
     </Link>
   );

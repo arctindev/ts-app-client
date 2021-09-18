@@ -13,6 +13,7 @@ export const servicesApi = createApi({
         url: `history`,
         headers: {
           authorization: `${sessionStorage.getItem('token')}`,
+          userid: `${sessionStorage.getItem('me')}`,
         },
         providesTags: ['Services'],
       }),
@@ -24,6 +25,7 @@ export const servicesApi = createApi({
         method: 'GET',
         headers: {
           authorization: `${sessionStorage.getItem('token')}`,
+          userid: `${sessionStorage.getItem('me')}`,
         },
         providesTags: ['Services'],
       }),

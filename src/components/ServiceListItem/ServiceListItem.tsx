@@ -4,7 +4,7 @@ import styles from './ServiceListItem.module.scss';
 import { RootStateOrAny, useSelector } from 'react-redux';
 
 export interface ServiceListItemProps {
-  id: number;
+  _id: string;
   name: string;
   hour: string;
   service: string;
