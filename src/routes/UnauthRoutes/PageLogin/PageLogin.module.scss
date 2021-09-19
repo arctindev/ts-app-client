@@ -1,0 +1,72 @@
+@import '../../../globalStyles/mixins.scss';
+@import '../../../globalStyles/variables.scss';
+
+.Wrapper {
+  @include ViewWrapper;
+  grid-row: 2/2;
+  height: calc(100vh - 78px);
+  overflow-y: auto;
+  display: grid;
+  grid-template-columns: repeat(12, [col-start] 1fr);
+  grid-column-gap: 24px;
+  padding: 138px 12px 21px 12px;
+  position: relative;
+}
+
+.LoginLinks {
+  position: absolute;
+  bottom: 21px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  width: 100%;
+  padding: 0px 12px;
+  letter-spacing: -1.67px;
+}
+.LoginLinkForgotPass {
+  font-weight: 400;
+  color: #{'#' + $black + '99'};
+}
+.LoginLinkCreateAccount {
+  font-weight: 600;
+  color: #{'#' + $black};
+}
+
+@media screen and (min-width: $mediumMobile) {
+  .Wrapper {
+    padding: 138px 18px 21px 18px;
+  }
+  .LoginLinks {
+    padding: 0px 18px;
+    font-size: $fontSizeS;
+  }
+}
+
+@media screen and (min-width: $mediumXMobile) {
+  .Wrapper {
+    padding: 138px 21px 21px 21px;
+  }
+  .LoginLinks {
+    padding: 0px 21px;
+    font-size: $fontSizeS;
+  }
+}
+
+@media screen and (min-width: $largeMobile) {
+  .Wrapper {
+    padding: 138px 24px 21px 24px;
+  }
+  .LoginLinks {
+    padding: 0px 24px;
+    font-size: $fontSizeS;
+  }
+}
+
+@media screen and (max-height: $mobileLandscape) {
+  .Wrapper {
+    padding: 24px 56px;
+    height: 100vh;
+    grid-row: 1/1;
+    grid-column: 2/2;
+  }
+}

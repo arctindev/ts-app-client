@@ -8,8 +8,8 @@ const HistoryCalendarList = () => {
   return (
     <div className={styles.HistoryList}>
       {isSuccess &&
-        data.data.map((item: object, index: number) => (
-          <HistoryCalendarItem key={index} itemData={item} />
+        data.data.map((item: any) => (
+          <HistoryCalendarItem key={item._id} itemData={item} />
         ))}
     </div>
   );

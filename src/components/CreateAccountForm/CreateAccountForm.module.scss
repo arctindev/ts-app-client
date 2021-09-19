@@ -1,0 +1,40 @@
+@import '../../globalStyles/variables.scss';
+
+.LoginFormWrapper {
+  grid-column: col-start 1 / span 12;
+  grid-row: 2/2;
+  display: flex;
+  flex-direction: column;
+}
+
+.FormInput {
+  margin-bottom: 12px;
+  font-size: $fontSizeS;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 12px;
+  background-color: transparent;
+  box-shadow: 0px 0px 12px -4px #{'#' + $black + '99'};
+}
+
+.FormField {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.FormField:last-of-type {
+  margin-bottom: 51px;
+}
+.LoginButton {
+  width: 88px;
+  height: 37px;
+  align-self: center;
+  border: none;
+  border-radius: 12px;
+  font-size: $fontSizeS;
+  font-weight: 600;
+  letter-spacing: -1.67px;
+  color: #{'#' + $white};
+  background-color: #{'#' + $black + 'DE'};
+}

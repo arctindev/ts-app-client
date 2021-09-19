@@ -1,5 +1,5 @@
-@import '../../globalStyles/mixins.scss';
-@import '../../globalStyles/variables.scss';
+@import '../../../globalStyles/mixins.scss';
+@import '../../../globalStyles/variables.scss';
 
 .Wrapper {
   @include ViewWrapper;
@@ -8,11 +8,17 @@
   overflow-y: auto;
 }
 
-.PageTitle {
+.SettingsMenu {
   grid-column: col-start 1 / span 12;
-  grid-row: 1/1;
-  display: flex;
-  justify-content: space-between;
+}
+
+.SettingsMenuItem {
+  margin-bottom: 24px;
+}
+
+.SettingsButton {
+  border: none;
+  background: none;
 }
 
 @media screen and (min-width: $mediumMobile) {
