@@ -1,17 +1,17 @@
 import React from 'react';
-import styles from './Template.module.scss';
-import MobileNav from '../components/MobileNav/MobileNav';
-import Header from '../components/Header/Header';
-import Footer from '../components/Footer/Footer';
-import HistorySidebar from '../components/HistorySidebar/HistorySidebar';
-import Navigation from '../components/Navigation/Navigation';
+import styles from './AuthTemplate.module.scss';
+import MobileNav from '../../components/MobileNav/MobileNav';
+import Header from '../../components/Header/Header';
+import Footer from '../../components/Footer/Footer';
+import HistorySidebar from '../../components/HistorySidebar/HistorySidebar';
+import Navigation from '../../components/Navigation/Navigation';
 import { RootStateOrAny, useSelector } from 'react-redux';
 
 type Props = {
   children: React.ReactNode;
 };
 
-const Template: React.FC<Props> = ({ children }) => {
+const AuthTemplate: React.FC<Props> = ({ children }) => {
   const darkMode = useSelector((state: RootStateOrAny) => state.darkMode);
   return (
     <div
@@ -31,4 +31,4 @@ const Template: React.FC<Props> = ({ children }) => {
   );
 };
 
-export default Template;
+export default AuthTemplate;

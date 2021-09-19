@@ -1,14 +1,14 @@
 import React from 'react';
-import Template from '../../template/Template';
+import AuthTemplate from '../../templates/AuthTemplate/AuthTemplate';
 import { BrowserRouter as Router } from 'react-router-dom';
-import Routes from '../../routes/Routes';
+import Routes from '../../routes/AuthRoutes/Routes';
 
 const Authenticated = (): JSX.Element => {
   return (
     <Router>
-      <Template>
+      <AuthTemplate>
         <Routes />
-      </Template>
+      </AuthTemplate>
     </Router>
   );
 };

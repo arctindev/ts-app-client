@@ -26,6 +26,9 @@ const Routes = (): JSX.Element => (
     <Route exact path="/">
       <Redirect to="/store" />
     </Route>
+    <Route exact path="/login">
+      <Redirect to="/store" />
+    </Route>
     <Route>
       <Redirect to="/404" />
     </Route>

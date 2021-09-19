@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './PageSettings.module.scss';
-import { Label } from '../../components/Label/Label';
-import { Title } from '../../components/Title/Title';
+import { Label } from '../../../components/Label/Label';
+import { Title } from '../../../components/Title/Title';
 import { RootStateOrAny, useSelector, useDispatch } from 'react-redux';
-import { changeTheme } from '../../store';
+import { changeTheme } from '../../../store';
 
 const PageSettings = (): JSX.Element => {
   const darkMode = useSelector((state: RootStateOrAny) => state.darkMode);
