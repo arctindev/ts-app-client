@@ -17,10 +17,14 @@ const PageStore = (): JSX.Element => {
     <div className={styles.Wrapper}>
       <div className={styles.PageTitle}>
         <Title titleText="Booking" />
-        <Label
-          classConfig="isBookingDate"
-          labelText={data && dataUtility(data.data[0].date)}
-        />
+        {data
+          ? data.data[0] && (
+              <Label
+                classConfig="isBookingDate"
+                labelText={data && dataUtility(data.data[0].date)}
+              />
+            )
+          : null}
       </div>
       <ServiceList data={data} isSuccess={isSuccess} />
     </div>

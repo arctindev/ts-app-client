@@ -7,8 +7,12 @@ const PageLogin = (): JSX.Element => (
   <div className={styles.Wrapper}>
     <LoginForm />
     <div className={styles.LoginLinks}>
-    <Link className={styles.LoginLinkForgotPass} to="/forgot_your_password">Forgot your Password ?</Link>
-    <Link className={styles.LoginLinkCreateAccount} to="/create_account">Create Account</Link>
+      <Link className={styles.LoginLinkForgotPass} to="/forgot_your_password">
+        Forgot your Password ?
+      </Link>
+      <Link className={styles.LoginLinkCreateAccount} to="/create_account">
+        Create Account
+      </Link>
     </div>
   </div>
 );

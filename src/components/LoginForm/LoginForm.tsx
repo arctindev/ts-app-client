@@ -1,5 +1,5 @@
 import React, { useRef, useEffect } from 'react';
-import styles from "./LoginForm.module.scss";
+import styles from './LoginForm.module.scss';
 import { useDispatch } from 'react-redux';
 import { authLogin, useLoginMutation } from '../../store';
 
@@ -29,9 +29,19 @@ const LoginForm = (): JSX.Element => {
 
   return (
     <div className={styles.LoginFormWrapper}>
-      <input className={styles.FormInput} ref={loginRef} placeholder="Login"></input>
-      <input className={styles.FormInput} ref={passRef} placeholder="Passowrd"></input>
-      <button className={styles.LoginButton} onClick={handleLoginClick}>Log In</button>
+      <input
+        className={styles.FormInput}
+        ref={loginRef}
+        placeholder="Login"
+      ></input>
+      <input
+        className={styles.FormInput}
+        ref={passRef}
+        placeholder="Passowrd"
+      ></input>
+      <button className={styles.LoginButton} onClick={handleLoginClick}>
+        Log In
+      </button>
     </div>
   );
 };
