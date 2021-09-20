@@ -15,6 +15,7 @@ const MobileNav = (): JSX.Element => {
 
   const handleLogoutClick = () => {
     sessionStorage.removeItem('token');
+    sessionStorage.removeItem('me');
     dispatch(authLogout());
   };
 

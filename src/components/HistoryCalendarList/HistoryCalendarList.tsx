@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { HistoryCalendarItem } from '../../components/HistoryCalendarItem/HistoryCalendarItem';
 import styles from './HistoryCalendarList.module.scss';
-import { useGetHistoryQuery } from '../../store';
+import { useGetHistoryMutation } from '../../store';
 
 const HistoryCalendarList = () => {
-  const { data, isSuccess } = useGetHistoryQuery([]);
+  const [getHistory, { data, isSuccess }] = useGetHistoryMutation();
+
+  useEffect(() => {
+    getHistory({});
+  }, []);
+
   return (
     <div className={styles.HistoryList}>
       {isSuccess &&

@@ -9,8 +9,17 @@
   background-color: #{'#' + $white};
 }
 
-.is-dark {
+.Template > svg {
+  display: none;
+}
+
+.Template.is-dark {
   background-color: #{'#' + $black};
+  & > svg {
+    & path {
+      fill: #{'#' + $white};
+    }
+  }
 }
 
 @media screen and (max-height: $mobileLandscape) {
@@ -19,14 +28,21 @@
     grid-template-columns: 78px auto 80px;
   }
   .Template > svg {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
   }
 }
 
 @media screen and (min-width: $tablet) and (min-height: $mobileLandscape+1) {
   .Template {
-    grid-template-columns: repeat(12, [col-start] 1fr);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    & > header {
+      position: fixed;
+      opacity: 0;
+    }
   }
 }
