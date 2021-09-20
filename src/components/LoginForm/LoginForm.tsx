@@ -37,7 +37,7 @@ const LoginForm = (): JSX.Element => {
       <input
         className={styles.FormInput}
         ref={passRef}
-        placeholder="Passowrd"
+        placeholder="Password"
       ></input>
       <button className={styles.LoginButton} onClick={handleLoginClick}>
         Log In

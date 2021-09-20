@@ -18,6 +18,11 @@
     grid-template-rows: auto;
     grid-template-columns: 78px auto 80px;
   }
+  .Template > svg {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+  }
 }
 
 @media screen and (min-width: $tablet) and (min-height: $mobileLandscape+1) {

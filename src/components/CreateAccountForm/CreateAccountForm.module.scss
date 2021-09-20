@@ -38,3 +38,9 @@
   color: #{'#' + $white};
   background-color: #{'#' + $black + 'DE'};
 }
+
+@media screen and (max-height: $mobileLandscape) {
+    .FormField:last-of-type {
+        margin-bottom: 12px;
+      }
+  }
