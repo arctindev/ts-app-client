@@ -10,6 +10,7 @@ const Navigation = () => {
 
   const handleLogoutClick = () => {
     sessionStorage.removeItem('token');
+    sessionStorage.removeItem('me');
     dispatch(authLogout());
   };
   return (

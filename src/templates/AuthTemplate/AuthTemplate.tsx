@@ -3,9 +3,9 @@ import styles from './AuthTemplate.module.scss';
 import MobileNav from '../../components/MobileNav/MobileNav';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
-import HistorySidebar from '../../components/HistorySidebar/HistorySidebar';
 import Navigation from '../../components/Navigation/Navigation';
 import { RootStateOrAny, useSelector } from 'react-redux';
+import HistorySidebar from '../../components/HistorySidebar/HistorySidebar';
 
 type Props = {
   children: React.ReactNode;

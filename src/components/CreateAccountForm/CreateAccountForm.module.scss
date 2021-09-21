@@ -17,6 +17,14 @@
   box-shadow: 0px 0px 12px -4px #{'#' + $black + '99'};
 }
 
+.FormInput.is-dark {
+  box-shadow: 0px 0px 12px -4px #{'#' + $white + 'DE'};
+  color: #{'#' + $white + '99'};
+  &::placeholder {
+    color: #{'#' + $white + '61'};
+  }
+}
+
 .FormField {
   display: flex;
   flex-direction: row;
@@ -37,4 +45,24 @@
   letter-spacing: -1.67px;
   color: #{'#' + $white};
   background-color: #{'#' + $black + 'DE'};
+  cursor: pointer;
+}
+
+.LoginButton.is-dark {
+  box-shadow: 0px 0px 12px -4px #{'#' + $white + 'DE'},
+    inset 0px 0px 8px 0px #{'#' + $white + '26'};
+  color: #{'#' + $white + 'DE'};
+}
+
+@media screen and (max-height: $mobileLandscape) {
+  .FormField:last-of-type {
+    margin-bottom: 8px;
+  }
+}
+
+@media screen and (min-width: $tablet) and (min-height: $mobileLandscape+1) {
+  .LoginFormWrapper {
+    grid-row: 3/3;
+    padding: 0 56px;
+  }
 }

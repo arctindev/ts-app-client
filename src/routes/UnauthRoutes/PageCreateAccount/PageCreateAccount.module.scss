@@ -4,37 +4,44 @@
 .Wrapper {
   @include ViewWrapper;
   grid-row: 2/2;
-  height: calc(100vh - calc(78px + 80px));
+  height: calc(100vh - 78px);
   overflow-y: auto;
   display: grid;
   grid-template-columns: repeat(12, [col-start] 1fr);
-  grid-template-rows: auto 1fr;
+  grid-template-rows: 74px auto;
   grid-column-gap: 24px;
+  padding: 21px 12px 21px 12px;
   position: relative;
+  & > .Header {
+    display: none;
+  }
 }
 
 .PageTitle {
   grid-column: col-start 1 / span 12;
-  grid-row: 1/1;
   display: flex;
   justify-content: space-between;
+  position: relative;
+  & > h1 {
+    font-size: $fontSizeXM;
+  }
 }
 
 @media screen and (min-width: $mediumMobile) {
   .Wrapper {
-    padding: 21px 18px;
+    padding: 21px 18px 21px 18px;
   }
 }
 
 @media screen and (min-width: $mediumXMobile) {
   .Wrapper {
-    padding: 21px 21px;
+    padding: 21px 21px 21px 21px;
   }
 }
 
 @media screen and (min-width: $largeMobile) {
   .Wrapper {
-    padding: 21px 24px;
+    padding: 21px 24px 21px 24px;
   }
 }
 
@@ -44,5 +51,49 @@
     height: 100vh;
     grid-row: 1/1;
     grid-column: 2/2;
+  }
+}
+
+@media screen and (min-width: $tablet) and (min-height: $mobileLandscape+1) {
+  .Wrapper {
+    width: 440px;
+    height: 512px;
+    padding: 0;
+    box-shadow: inset 0 0 8px #{'#' + $black + '61'};
+    border-radius: 30px;
+    grid-template-rows: 78px 100px 1fr;
+    & > .Header {
+      grid-row: 1/1;
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+      box-shadow: inset 0 6px 10px -6px #{'#' + $white + 'DE'};
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      grid-column: col-start 1 / span 12;
+      background-color: #{'#' + $black + 'DE'};
+      height: 78px;
+      & > svg {
+        & path {
+          fill: #{'#' + $white + 'FF'};
+        }
+      }
+    }
+  }
+  .PageTitle {
+    padding: 42px 58px;
+  }
+  .Header.is-dark {
+    box-shadow: inset 0 6px 10px -6px #{'#' + $white + 'DE'},
+      0px 4px 8px -4px #{'#' + $white + '61'};
+  }
+  .Wrapper.is-dark {
+    box-shadow: inset 0 0 8px #{'#' + $white + '40'};
+    & > .Header > svg {
+      & path {
+        fill: #{'#' + $white + 'DE'};
+      }
+    }
   }
 }

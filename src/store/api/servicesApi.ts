@@ -5,17 +5,16 @@ export const servicesApi = createApi({
   baseQuery: fetchBaseQuery({
     baseUrl: 'http://localhost:5000/user-data/',
   }),
-  tagTypes: ['Services'],
 
   endpoints: (builder) => ({
-    getHistory: builder.query({
+    getHistory: builder.mutation({
       query: () => ({
         url: `history`,
+        method: 'GET',
         headers: {
           authorization: `${sessionStorage.getItem('token')}`,
           userid: `${sessionStorage.getItem('me')}`,
         },
-        providesTags: ['Services'],
       }),
     }),
 
@@ -27,10 +26,9 @@ export const servicesApi = createApi({
           authorization: `${sessionStorage.getItem('token')}`,
           userid: `${sessionStorage.getItem('me')}`,
         },
-        providesTags: ['Services'],
       }),
     }),
   }),
 });
 
-export const { useGetHistoryQuery, useGetDayByIdMutation } = servicesApi;
+export const { useGetHistoryMutation, useGetDayByIdMutation } = servicesApi;

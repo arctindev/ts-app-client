@@ -2,11 +2,12 @@
 
 .HistorySidebar {
   display: none;
-  grid-column: col-start 10 / span 4;
-  grid-row: 2/ 2;
   background-color: #{'#' + $black + 'DE'};
   overflow-y: auto;
   padding: 0 12px;
+  & > button {
+    display: none;
+  }
 }
 
 .HistoryTitle {
@@ -23,8 +24,80 @@
 .HistorySidebar.is-dark {
   background-color: #{'#' + $white + '14'};
 }
+
+@keyframes buttonAppear {
+  0%{
+    opacity: 0;
+  }80%{
+    opacity: 0;
+  }100%{
+    opacity: 1;
+  }
+}
+@media screen and (min-width: $tablet) and (min-height: $mobileLandscape+1) and (max-width: $desktop) {
+  .HistorySidebar {
+    z-index: 1;
+    top: 78px;
+    right: -390px;
+    display: block;
+    position: absolute;
+    width: 390px;
+    height: calc(100vh - calc(78px + 80px));
+    background-color: #{'#' + $white + 'FF'};
+    transition: transform 0.7s ease-in-out;
+    overflow-x: hidden;
+    &:before {
+      z-index: -1;
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #{'#' + $black + 'DE'};
+    }
+    & > button {
+      z-index: 2;
+      border-top-left-radius: 18px;
+      border-top-right-radius: 18px;
+      display: block;
+      position: fixed;
+      top: 30vh;
+      height: 45px;
+      width: 173px;
+      right: -66px;
+      transform: rotateZ(-90deg);
+      font-size: $fontSizeM;
+      font-weight: 800;
+      animation: buttonAppear 0.3s ease-in-out;
+    }
+  }
+  .HistorySidebar.is-dark {
+    background-color: #{'#' + $black + 'FF'};
+    &:before {
+      z-index: -1;
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #{'#' + $white + '14'};
+    }
+  }
+  .HistorySidebar.show {
+    transform: translateX(-390px);
+    & > button {
+      display: none;
+    }
+  }
+}
+
 @media screen and (min-width: $desktop) and (min-height: $mobileLandscape+1) {
   .HistorySidebar {
     display: block;
+    position: relative;
+    grid-column: col-start 10 / span 4;
+    grid-row: 2/ 2;
   }
 }

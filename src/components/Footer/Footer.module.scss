@@ -1,6 +1,7 @@
 @import '../../globalStyles/variables.scss';
 
 .Footer {
+  z-index: 2;
   display: none;
   grid-row: 3/3;
   width: 100%;

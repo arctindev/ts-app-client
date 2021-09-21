@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './UnauthTemplate.module.scss';
 import Header from '../../components/Header/Header';
 import { RootStateOrAny, useSelector } from 'react-redux';
+import { ReactComponent as LandscapeDecorationSVG } from '../../assets/svg/LandscapeDecorationSVG.svg';
 
 type Props = {
   children: React.ReactNode;
@@ -18,6 +19,7 @@ const AuthTemplate: React.FC<Props> = ({ children }) => {
       }
     >
       <Header />
+      <LandscapeDecorationSVG />
       {children}
     </div>
   );

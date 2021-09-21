@@ -2,7 +2,7 @@ import { configureStore } from '@reduxjs/toolkit';
 import { darkModeSlice, changeTheme } from './darkMode';
 import {
   servicesApi,
-  useGetHistoryQuery,
+  useGetHistoryMutation,
   useGetDayByIdMutation,
 } from './api/servicesApi';
 import { authLogin, authLogout, authenticationSlice } from './authentication';
@@ -10,7 +10,7 @@ import { userApi, useLoginMutation } from './api/userApi';
 
 export { changeTheme };
 export { authLogin, authLogout };
-export { useGetHistoryQuery, useGetDayByIdMutation };
+export { useGetHistoryMutation, useGetDayByIdMutation };
 export { useLoginMutation };
 
 export const store = configureStore({

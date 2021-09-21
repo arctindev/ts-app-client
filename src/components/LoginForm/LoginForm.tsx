@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import styles from './LoginForm.module.scss';
-import { useDispatch } from 'react-redux';
+import { useDispatch, RootStateOrAny, useSelector } from 'react-redux';
 import { authLogin, useLoginMutation } from '../../store';
 
 const LoginForm = (): JSX.Element => {
@@ -8,6 +8,7 @@ const LoginForm = (): JSX.Element => {
   const loginRef = useRef(null);
   const passRef = useRef(null);
   const [getUser, { isError, data, isSuccess }] = useLoginMutation();
+  const darkMode = useSelector((state: RootStateOrAny) => state.darkMode);
 
   const handleLoginClick = () => {
     const login = (loginRef as any).current.value;
@@ -30,16 +31,32 @@ const LoginForm = (): JSX.Element => {
   return (
     <div className={styles.LoginFormWrapper}>
       <input
-        className={styles.FormInput}
+        className={
+          darkMode
+            ? `${styles.FormInput} ${styles['is-dark']}`
+            : `${styles.FormInput}`
+        }
         ref={loginRef}
         placeholder="Login"
       ></input>
       <input
-        className={styles.FormInput}
+        className={
+          darkMode
+            ? `${styles.FormInput} ${styles['is-dark']}`
+            : `${styles.FormInput}`
+        }
         ref={passRef}
-        placeholder="Passowrd"
+        type="password"
+        placeholder="Password"
       ></input>
-      <button className={styles.LoginButton} onClick={handleLoginClick}>
+      <button
+        className={
+          darkMode
+            ? `${styles.LoginButton} ${styles['is-dark']}`
+            : `${styles.LoginButton}`
+        }
+        onClick={handleLoginClick}
+      >
         Log In
       </button>
     </div>

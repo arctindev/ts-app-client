@@ -12,12 +12,24 @@ if (userPrefersDark) {
 } else {
   console.log('User prefers a light interface');
 }
+if (localStorage.getItem('darkMode')) {
+  if (localStorage.getItem('darkMode') === 'dark') {
+    darkModeInitialState = true;
+  } else {
+    darkModeInitialState = false;
+  }
+}
 
 export const darkModeSlice = createSlice({
   name: 'darkMode',
   initialState: darkModeInitialState,
   reducers: {
     changeTheme(state) {
+      if (!state) {
+        localStorage.setItem('darkMode', 'dark');
+      } else {
+        localStorage.setItem('darkMode', 'light');
+      }
       return !state;
     },
   },
