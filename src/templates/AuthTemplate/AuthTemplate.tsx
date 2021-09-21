@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import styles from './AuthTemplate.module.scss';
 import MobileNav from '../../components/MobileNav/MobileNav';
 import Header from '../../components/Header/Header';
@@ -12,20 +12,6 @@ type Props = {
 };
 
 const AuthTemplate: React.FC<Props> = ({ children }) => {
-  const [width, setWidth] = useState(window.innerWidth);
-  const [height, setHeight] = useState(window.innerHeight);
-
-  const handleWindowResize = () => {
-    setWidth(window.innerWidth);
-    setHeight(window.innerHeight);
-  };
-
-  useEffect(() => {
-    window.addEventListener('resize', handleWindowResize);
-    return () => {
-      window.removeEventListener('resize', handleWindowResize);
-    };
-  }, []);
   const darkMode = useSelector((state: RootStateOrAny) => state.darkMode);
   return (
     <div
@@ -39,11 +25,7 @@ const AuthTemplate: React.FC<Props> = ({ children }) => {
       <Navigation />
       {children}
       <MobileNav />
-      {width >= 768 && height >= 568 ? (
-        <HistorySidebar /> ? (
-          <HistorySidebar />
-        ) : null
-      ) : null}
+      <HistorySidebar />
       <Footer />
     </div>
   );

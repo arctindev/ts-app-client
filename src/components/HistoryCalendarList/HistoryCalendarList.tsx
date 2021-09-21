@@ -8,7 +8,7 @@ const HistoryCalendarList = () => {
 
   useEffect(() => {
     getHistory({});
-  }, []);
+  }, [getHistory]);
 
   return (
     <div className={styles.HistoryList}>

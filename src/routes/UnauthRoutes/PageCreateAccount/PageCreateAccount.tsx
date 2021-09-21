@@ -2,9 +2,9 @@ import React from 'react';
 import styles from './PageCreateAccount.module.scss';
 import CreateAccountForm from '../../../components/CreateAccountForm/CreateAccountForm';
 import { Title } from '../../../components/Title/Title';
-import { Link } from 'react-router-dom';
 import { ReactComponent as LoginLogoSVG } from '../../../assets/svg/LoginLogo.svg';
 import { RootStateOrAny, useSelector } from 'react-redux';
+import { BackButton } from '../../../components/BackButton/BackButton';
 
 const PageCreateAccount = (): JSX.Element => {
   const darkMode = useSelector((state: RootStateOrAny) => state.darkMode);
@@ -27,7 +27,7 @@ const PageCreateAccount = (): JSX.Element => {
       </div>
       <div className={styles.PageTitle}>
         <Title titleText="Sign up" />
-        <Link to="/login">Back</Link>
+        <BackButton />
       </div>
       <CreateAccountForm />
     </div>

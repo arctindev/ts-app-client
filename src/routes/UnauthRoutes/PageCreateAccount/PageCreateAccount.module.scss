@@ -21,6 +21,7 @@
   grid-column: col-start 1 / span 12;
   display: flex;
   justify-content: space-between;
+  position: relative;
   & > h1 {
     font-size: $fontSizeXM;
   }

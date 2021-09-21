@@ -13,6 +13,25 @@
   grid-row: 1/1;
   display: flex;
   justify-content: space-between;
+  position: relative;
+}
+.TitleDate {
+  display: flex;
+  & > svg {
+    margin: 3px 9px;
+    & path {
+      fill: #{'#' + $black};
+    }
+  }
+}
+
+.TitleDate.is-dark {
+  display: flex;
+  & > svg {
+    & path {
+      fill: #{'#' + $white};
+    }
+  }
 }
 
 @media screen and (min-width: $mediumMobile) {
