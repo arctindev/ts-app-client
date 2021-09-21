@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './PageStore.module.scss';
 import { Title } from '../../../components/Title/Title';
 import { Label } from '../../../components/Label/Label';
@@ -8,6 +8,7 @@ import { dataUtility } from '../../../utils/dataUtility';
 
 const PageStore = (): JSX.Element => {
   const [getServices, { data, isSuccess }] = useGetDayByIdMutation();
+  const [serviceDetails, setServiceDetails] = useState({ active: false });
 
   useEffect(() => {
     getServices({ id: 'today' });
@@ -26,7 +27,11 @@ const PageStore = (): JSX.Element => {
             )
           : null}
       </div>
-      <ServiceList data={data} isSuccess={isSuccess} />
+      <ServiceList
+        data={data}
+        isSuccess={isSuccess}
+        setServiceDetails={setServiceDetails}
+      />
     </div>
   );
 };

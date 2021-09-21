@@ -1,7 +1,7 @@
-import react, {useState, useEffect} from 'react';
+import { useState, useEffect } from 'react';
 
 const useWindowResize = () => {
-    const [width, setWidth] = useState(window.innerWidth);
+  const [width, setWidth] = useState(window.innerWidth);
   const [height, setHeight] = useState(window.innerHeight);
 
   const handleWindowResize = () => {
@@ -16,8 +16,9 @@ const useWindowResize = () => {
     };
   }, []);
   return {
-      width, height
-  }
-}
+    width,
+    height,
+  };
+};
 
 export default useWindowResize;

@@ -8,16 +8,24 @@ export interface ServiceListItemProps {
   name: string;
   hour: string;
   service: string;
+  setServiceDetails?: any;
 }
 
-const ServiceListItem = (serviceData: ServiceListItemProps) => {
+const ServiceListItem = ({ ...props }) => {
   const darkMode = useSelector((state: RootStateOrAny) => state.darkMode);
+  const handleButtonClick = () => {
+    props.setServiceDetails({
+      active: true,
+      data: { name: props.name, hour: props.hour, service: props.service },
+    });
+  };
   return (
     <li className={styles.ListItem}>
-      <Label classConfig="ListElipsedName" labelText={serviceData.name} />
-      <Label classConfig="ListHour" labelText={serviceData.hour} />
-      <Label classConfig="ListElipsedLabel" labelText={serviceData.service} />
+      <Label classConfig="ListElipsedName" labelText={props.name} />
+      <Label classConfig="ListHour" labelText={props.hour} />
+      <Label classConfig="ListElipsedLabel" labelText={props.service} />
       <button
+        onClick={handleButtonClick}
         className={
           darkMode
             ? `${styles.ListButton} ${styles['is-dark']}`

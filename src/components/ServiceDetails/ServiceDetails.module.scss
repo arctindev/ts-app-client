@@ -1,0 +1,24 @@
+@import '../../globalStyles/variables.scss';
+@import '../../globalStyles/mixins.scss';
+
+.ServiceDetailsWrapper {
+  grid-column: col-start 1 / span 12;
+  grid-row: 2/2;
+  color: #{'#' + $black};
+}
+
+.ServiceDetailsWrapper.is-dark {
+  color: #{'#' + $white + 'DE'};
+}
+
+@media screen and (min-width: $tablet) and (min-height: $mobileLandscape+1) {
+  .ServiceDetailsWrapper {
+    grid-column: col-start 1 / span 7;
+  }
+}
+
+@media screen and (min-width: $desktop) and (min-height: $mobileLandscape+1) {
+  .ServiceDetailsWrapper {
+    grid-column: col-start 1 / span 5;
+  }
+}

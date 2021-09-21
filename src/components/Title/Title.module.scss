@@ -17,9 +17,3 @@
     font-size: $fontSizeXM;
   }
 }
-
-@media screen and (min-width: $desktop) and (min-height: $mobileLandscape+1) {
-  .Title {
-    font-size: $fontSizeL;
-  }
-}

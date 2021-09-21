@@ -1,23 +1,21 @@
 @import '../../globalStyles/variables.scss';
 
 .Button {
-    border: none;
-    background: none;
-    cursor: pointer;
-    position: absolute;
-    top: 0;
-    right: 0;
-    & > svg {
-      & path {
-          fill: #{'#' + $black};
-      }
+  border: none;
+  background: none;
+  cursor: pointer;
+  align-self: flex-start;
+  & > svg {
+    & path {
+      fill: #{'#' + $black};
     }
+  }
 }
 
 .Button.is-dark {
-    & > svg {
-        & path {
-            fill: #{'#' + $white};
-        }
-      }
+  & > svg {
+    & path {
+      fill: #{'#' + $white + 'DE'};
+    }
+  }
 }

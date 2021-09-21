@@ -6,7 +6,7 @@ import HistoryCalendarList from '../../../components/HistoryCalendarList/History
 import useWindowResize from '../../../hooks/useWindowResize';
 
 const PageHistory = (): JSX.Element => {
-  const {width, height} = useWindowResize();
+  const { width, height } = useWindowResize();
 
   if (width >= 768 && height >= 568) {
     return <Redirect to="/store" />;
